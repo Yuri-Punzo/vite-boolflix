@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const store = reactive({
     api_key: "f960c6dfacd4d59b35ba116a5e61632b",
-    api_url: "https://api.themoviedb.org/3/search/movie?api_key=f960c6dfacd4d59b35ba116a5e61632b&query=Highlander",
+    api_url: "https://api.themoviedb.org/3/search/movie?api_key=f960c6dfacd4d59b35ba116a5e61632b&query=",
     error: null,
     loading: true,
     searchText: "",
