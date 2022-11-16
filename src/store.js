@@ -11,10 +11,9 @@ export const store = reactive({
     callApi: (url) => {
         axios.get(url)
             .then(response => {
-                console.log(response);
+                //console.log(response);
                 console.log(response.data.results);
                 store.results = response.data.results
-                /*store.filmsArrayLength = response.data.results.length */
                 store.loading = false
             })
             .catch(error => {
