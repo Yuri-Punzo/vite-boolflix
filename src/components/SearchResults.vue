@@ -33,5 +33,10 @@ export default {
     height: 300px;
     background-color: black;
     color: white;
+    margin-bottom: 2rem;
+
+    .my_card_body {
+        padding: 1.5rem;
+    }
 }
 </style>

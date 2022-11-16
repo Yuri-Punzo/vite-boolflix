@@ -10,9 +10,9 @@ export default {
 </script>
 
 <template>
-    <div id="site_main">
+    <div id="site_main" class="pt-5">
         <div class="container">
-            <div class="row row-cols-1 row-cols-md-5">
+            <div class="row row-cols-1 row-cols-md-3">
                 <SearchResults />
             </div>
         </div>
