@@ -2,17 +2,19 @@ import { reactive } from "vue";
 import axios from "axios";
 
 export const store = reactive({
-    //API_URL: "link to desired api"
+    api_key: "f960c6dfacd4d59b35ba116a5e61632b",
+    api_url: "https://api.themoviedb.org/3/search/movie?api_key=f960c6dfacd4d59b35ba116a5e61632b&query=Highlander",
     error: null,
     loading: true,
     searchText: "",
+    results: null,
     callApi: (url) => {
         axios.get(url)
             .then(response => {
                 console.log(response);
-                /* console.log(response.data);
-                store.characters = response.data
-                store.charactersLength = response.data.length */
+                console.log(response.data.results);
+                /* store.results = response.data.results
+                store.filmsArrayLength = response.data.results.length */
                 store.loading = false
             })
             .catch(error => {
