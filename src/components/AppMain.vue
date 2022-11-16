@@ -11,7 +11,11 @@ export default {
 
 <template>
     <div id="site_main">
-        <SearchResults />
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-5">
+                <SearchResults />
+            </div>
+        </div>
     </div>
     <!-- /#site_main -->
 </template>

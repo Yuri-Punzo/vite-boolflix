@@ -13,8 +13,8 @@ export const store = reactive({
             .then(response => {
                 console.log(response);
                 console.log(response.data.results);
-                /* store.results = response.data.results
-                store.filmsArrayLength = response.data.results.length */
+                store.results = response.data.results
+                /*store.filmsArrayLength = response.data.results.length */
                 store.loading = false
             })
             .catch(error => {
