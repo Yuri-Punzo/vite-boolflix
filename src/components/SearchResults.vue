@@ -17,13 +17,21 @@ export default {
 
 <template>
     <div class="col" v-for="film in store.results">
-        <h4>{{ film.title }}</h4>
-        <h5>{{ film.original_title }}</h5>
-        <p>{{ film.original_language }}</p>
-        <p>{{ film.vote_average }}</p>
+        <div class="my_card">
+            <div class="my_card_body">
+                <h5>{{ film.title }}</h5>
+                <p>{{ film.original_title }}</p>
+                <p>{{ film.original_language }}</p>
+                <p>{{ film.vote_average }}</p>
+            </div>
+        </div>
     </div>
 </template>
 
 <style lang="scss" scoped>
-
+.my_card {
+    height: 300px;
+    background-color: black;
+    color: white;
+}
 </style>
