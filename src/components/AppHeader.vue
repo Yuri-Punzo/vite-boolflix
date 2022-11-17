@@ -9,6 +9,7 @@ export default {
     },
     methods: {
         searchFunction() {
+            store.results = null
             let seriesUrl
             let movieUrl
             let searchQuery = store.searchText
@@ -16,6 +17,7 @@ export default {
             movieUrl = `${store.api_movie_url}api_key=${store.api_key}&query=${searchQuery}`
             store.callApi(seriesUrl)
             store.callApi(movieUrl)
+            store.searchText = ""
         }
     }
 }
