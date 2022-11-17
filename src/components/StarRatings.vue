@@ -24,9 +24,13 @@ export default {
         height: 25px;
     }
 
-    h5,
+    h5 {
+        display: inline;
+    }
+
     p {
         display: inline;
+        color: gray;
     }
 }
 </style>

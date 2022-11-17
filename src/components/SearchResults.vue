@@ -38,7 +38,7 @@ export default {
 
                 <StarRatings :itemRating="item.vote_average" />
 
-                <div class="overview">
+                <div class="overview pt-2">
                     <h5>Overview: </h5>
                     <p class="fs-5">{{ item.overview }}</p>
                 </div>
@@ -56,6 +56,10 @@ export default {
 <style lang="scss" scoped>
 .my_col {
     padding: 0 12px 0 12px;
+
+    &:hover .poster {
+        display: none;
+    }
 }
 
 .my_card {
@@ -70,9 +74,13 @@ export default {
         padding: 1.5rem;
         overflow-y: auto;
 
-        h5,
+        h5 {
+            display: inline;
+        }
+
         p {
             display: inline;
+            color: gray;
         }
     }
 }
@@ -86,9 +94,7 @@ export default {
     background-color: black;
     color: white;
 
-    &:hover {
-        opacity: 0;
-    }
+
 }
 
 .overview {
