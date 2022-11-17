@@ -21,7 +21,7 @@ export default {
 <template>
     <div id="site_header" class="d-flex justify-content-between aling-items-center">
         <div class="my_navbar">
-            <img class="my-4" src="https://image.tmdb.org/t/p/w342/wwemzKWzjKYJFfCeiB57q3r4Bcm.png" alt="">
+            <img class="my-4" src="../assets/img/boolflix-homemade-logo.png" alt="">
             <span class="nav_links"><a href="">Home</a></span>
             <span class="nav_links"><a href="">Serie TV</a></span>
             <span class="nav_links"><a href="">Film</a></span>
