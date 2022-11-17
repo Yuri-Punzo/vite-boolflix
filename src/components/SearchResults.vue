@@ -22,7 +22,7 @@ export default {
 </script>
 
 <template>
-    <div class="col position-relative" v-for="item in store.results">
+    <div class="my_col position-relative" v-for="item in store.results">
         <div class=" my_card">
             <div class="my_card_body">
                 <div class="title">
@@ -54,6 +54,10 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+.my_col {
+    padding: 0 12px 0 12px;
+}
+
 .my_card {
     height: 513px;
     width: 342px;
