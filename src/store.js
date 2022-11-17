@@ -18,8 +18,8 @@ export const store = reactive({
                     store.results = response.data.results
                 }
                 else {
-                    response.data.results.forEach(element => {
-                        store.results.push(element)
+                    response.data.results.forEach(object => {
+                        store.results.push(object)
                     })
                 }
                 store.loading = false
