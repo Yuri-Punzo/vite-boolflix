@@ -64,10 +64,11 @@ export default {
     background-color: black;
     color: white;
     margin-bottom: 2rem;
-    overflow: hidden;
 
     .my_card_body {
+        height: 100%;
         padding: 1.5rem;
+        overflow-y: auto;
 
         h5,
         p {
