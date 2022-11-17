@@ -8,14 +8,6 @@ export default {
   components: {
     AppHeader,
     AppMain
-  },
-  /* data() {
-    return {
-      store
-    }
-  }, */
-  mounted() {
-    //store.callApi(store.api_url)
   }
 }
 </script>
