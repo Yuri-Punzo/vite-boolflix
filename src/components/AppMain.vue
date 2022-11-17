@@ -12,7 +12,7 @@ export default {
 <template>
     <div id="site_main" class="pt-5">
         <div class="my_container">
-            <div class="my_row d-flex flex-wrap justify-content-between">
+            <div class="my_row d-flex flex-wrap justify-content-evenly">
                 <SearchResults />
             </div>
         </div>
@@ -21,8 +21,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-.my_container {
+/* .my_container {
     width: 90%;
-    margin: auto;
-}
+} */
 </style>
