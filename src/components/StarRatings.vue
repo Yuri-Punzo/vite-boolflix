@@ -8,47 +8,11 @@ export default {
 </script>
 
 <template>
-    <div v-if="Math.ceil(itemRating / 2) === 5" class="d-flex my_rating pt-1">
-        <h5>Voto:</h5>
-        <div class="d-flex ps-2">
-            <img src="../assets/img/Mario64-Star.png" alt="">
-            <img src="../assets/img/Mario64-Star.png" alt="">
-            <img src="../assets/img/Mario64-Star.png" alt="">
-            <img src="../assets/img/Mario64-Star.png" alt="">
-            <img src="../assets/img/Mario64-Star.png" alt="">
-        </div>
+    <div v-if="Math.ceil(itemRating / 2) > 0" class="d-flex my_rating pt-1">
+        <h5 class="pe-2">Voto:</h5>
+        <img src="../assets/img/Mario64-Star.png" v-for="star in Math.ceil(itemRating / 2)">
     </div>
-    <div v-else-if="Math.ceil(itemRating / 2) === 4" class="d-flex my_rating pt-1">
-        <h5>Voto:</h5>
-        <div class="d-flex ps-2">
-            <img src="../assets/img/Mario64-Star.png" alt="">
-            <img src="../assets/img/Mario64-Star.png" alt="">
-            <img src="../assets/img/Mario64-Star.png" alt="">
-            <img src="../assets/img/Mario64-Star.png" alt="">
-        </div>
-    </div>
-    <div v-else-if="Math.ceil(itemRating / 2) === 3" class="d-flex my_rating pt-1">
-        <h5>Voto:</h5>
-        <div class="d-flex ps-2">
-            <img src="../assets/img/Mario64-Star.png" alt="">
-            <img src="../assets/img/Mario64-Star.png" alt="">
-            <img src="../assets/img/Mario64-Star.png" alt="">
-        </div>
-    </div>
-    <div v-else-if="Math.ceil(itemRating / 2) === 2" class="d-flex my_rating pt-1">
-        <h5>Voto:</h5>
-        <div class="d-flex ps-2">
-            <img src="../assets/img/Mario64-Star.png" alt="">
-            <img src="../assets/img/Mario64-Star.png" alt="">
-        </div>
-    </div>
-    <div v-else-if="Math.ceil(itemRating / 2) === 1" class="d-flex my_rating pt-1">
-        <h5>Voto:</h5>
-        <div class="d-flex ps-2">
-            <img src="../assets/img/Mario64-Star.png" alt="">
-        </div>
-    </div>
-    <div v-else class="my_rating pt-2">
+    <div v-else class="my_rating">
         <h5>Voto: </h5>
         <p class="fs-5">Unrated</p>
     </div>
