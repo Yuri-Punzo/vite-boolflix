@@ -3,7 +3,8 @@ import axios from "axios";
 
 export const store = reactive({
     api_key: "f960c6dfacd4d59b35ba116a5e61632b",
-    api_url: "https://api.themoviedb.org/3/search/multi?",
+    api_movie_url: "https://api.themoviedb.org/3/search/movie?",
+    api_series_url: "https://api.themoviedb.org/3/search/tv?",
     error: null,
     loading: true,
     searchText: "",
@@ -13,7 +14,14 @@ export const store = reactive({
             .then(response => {
                 //console.log(response);
                 console.log(response.data.results);
-                store.results = response.data.results
+                if (store.results === null) {
+                    store.results = response.data.results
+                }
+                else {
+                    response.data.results.forEach(element => {
+                        store.results.push(element)
+                    })
+                }
                 store.loading = false
             })
             .catch(error => {
