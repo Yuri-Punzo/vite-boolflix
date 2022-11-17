@@ -9,10 +9,10 @@ export default {
     },
     methods: {
         searchFunction() {
-            let url
+            let allUrl
             let searchQuery = store.searchText
-            url = `${store.api_url}${searchQuery}`
-            store.callApi(url)
+            allUrl = `${store.api_url}api_key=${store.api_key}&query=${searchQuery}`
+            store.callApi(allUrl)
         }
     }
 }
