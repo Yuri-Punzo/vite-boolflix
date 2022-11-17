@@ -50,7 +50,6 @@ export default {
         <div class="poster" v-else>
             <img :src="`https://image.tmdb.org/t/p/w342${item.poster_path}`" alt="">
         </div>
-        <!-- :alt="`${item.original_title} ${item.original_name}`" -->
     </div>
 </template>
 
