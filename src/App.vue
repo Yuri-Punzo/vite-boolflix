@@ -21,13 +21,10 @@ export default {
 </script>
 
 <template>
-  <h1 class="text-center">Hello Motherfucker</h1>
   <AppHeader />
   <AppMain />
 </template>
 
 <style lang="scss" scoped>
-h1 {
-  margin-top: 200px;
-}
+
 </style>

@@ -20,6 +20,7 @@ export default {
 
 <template>
     <div id="site_header" class="text-center">
+        <h1 class="text-center my-3">Hello Motherfucker</h1>
         <input placeholder="Search" v-model="store.searchText" @keyup.enter="searchFunction">
         <button class="ms-2 rounded" @click="searchFunction">Search</button>
     </div>
