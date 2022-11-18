@@ -6,7 +6,7 @@ export const store = reactive({
     api_movie_url: "https://api.themoviedb.org/3/search/movie?",
     api_series_url: "https://api.themoviedb.org/3/search/tv?",
     error: null,
-    loading: true,
+    langList: ["it", "en", "fr", "de", "es"],
     searchText: "",
     firstSearch: true,
     results: [],
@@ -18,7 +18,6 @@ export const store = reactive({
                 response.data.results.forEach(object => {
                     store.results.push(object)
                 })
-                store.loading = false
                 console.log(store.results);
             })
             .catch(error => {
