@@ -8,22 +8,18 @@ export const store = reactive({
     error: null,
     loading: true,
     searchText: "",
-    results: null,
+    firstSearch: true,
+    results: [],
     callApi: (url) => {
         axios.get(url)
             .then(response => {
                 //console.log(response);
                 //console.log(response.data.results);
-                if (store.results === null) {
-                    store.results = response.data.results
-                }
-                else {
-                    response.data.results.forEach(object => {
-                        store.results.push(object)
-                    })
-                }
+                response.data.results.forEach(object => {
+                    store.results.push(object)
+                })
                 store.loading = false
-                //console.log(store.results);
+                console.log(store.results);
             })
             .catch(error => {
                 console.error(error.message);

@@ -1,5 +1,5 @@
 <script>
-import SearchResults from "./searchResults.vue"
+import SearchResults from "./SearchResults.vue"
 
 export default {
     name: "AppMain",

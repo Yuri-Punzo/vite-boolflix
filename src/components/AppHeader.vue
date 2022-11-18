@@ -9,13 +9,14 @@ export default {
     },
     methods: {
         searchFunction() {
-            store.results = null
+            store.results = []
             let searchQuery = store.searchText
             let seriesUrl = `${store.api_series_url}api_key=${store.api_key}&query=${searchQuery}`
             let movieUrl = `${store.api_movie_url}api_key=${store.api_key}&query=${searchQuery}`
             store.callApi(seriesUrl)
             store.callApi(movieUrl)
             store.searchText = ""
+            store.firstSearch = false
         }
     }
 }

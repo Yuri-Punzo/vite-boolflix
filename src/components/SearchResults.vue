@@ -21,10 +21,10 @@ export default {
 </script>
 
 <template>
-    <!-- <div v-if="store.results === ???  ">
+    <div v-if="store.results.length === 0">
         <h1 class="text-center">OPS</h1>
-    </div>         v-else   -->
-    <div class="my_col position-relative" v-for="item in store.results">
+    </div>
+    <div v-else class="my_col position-relative" v-for="item in store.results">
         <div class=" my_card">
             <div class="my_card_body">
                 <div class="title">
