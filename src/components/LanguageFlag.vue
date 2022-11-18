@@ -17,7 +17,7 @@ export default {
 <template>
     <div v-if="store.langList.includes(itemLanguage)" class="d-flex pt-2">
         <h5>Lingua:</h5>
-        <img class="my_flag" :src="`../assets/img/${itemLanguage}.png`" alt="">
+        <img class="my_flag" :src="`src/assets/img/${itemLanguage}.png`" alt="">
     </div>
     <div v-else class="pt-2">
         <h5>Lingua: </h5>
