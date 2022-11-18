@@ -13,7 +13,7 @@ export const store = reactive({
         axios.get(url)
             .then(response => {
                 //console.log(response);
-                console.log(response.data.results);
+                //console.log(response.data.results);
                 if (store.results === null) {
                     store.results = response.data.results
                 }
@@ -23,6 +23,7 @@ export const store = reactive({
                     })
                 }
                 store.loading = false
+                console.log(store.results);
             })
             .catch(error => {
                 console.error(error.message);
