@@ -36,7 +36,6 @@ export default {
             <input placeholder="Search" v-model="store.searchText" @keyup.enter="searchFunction">
             <button class="ms-2 rounded" @click="searchFunction">Search</button>
         </div>
-
     </div>
     <!-- /#site_header -->
 </template>
@@ -50,7 +49,6 @@ export default {
         img {
             height: 30px;
             padding-right: 24px;
-
         }
 
         span {
@@ -66,7 +64,6 @@ export default {
             }
         }
     }
-
 
     .search_bar {
         margin-top: 24px;

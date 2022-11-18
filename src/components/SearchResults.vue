@@ -17,7 +17,6 @@ export default {
             store
         }
     }
-
 }
 </script>
 
@@ -97,8 +96,6 @@ export default {
     width: 342px;
     background-color: black;
     color: white;
-
-
 }
 
 .overview {
