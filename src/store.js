@@ -23,7 +23,7 @@ export const store = reactive({
                     })
                 }
                 store.loading = false
-                console.log(store.results);
+                //console.log(store.results);
             })
             .catch(error => {
                 console.error(error.message);
