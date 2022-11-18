@@ -5,6 +5,11 @@ export default {
     name: "LanguageFlag",
     props: {
         itemLanguage: String
+    },
+    data() {
+        return {
+            store
+        }
     }
 }
 </script>

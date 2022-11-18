@@ -19,9 +19,9 @@ export default {
     }
 }
 </script>
-
+<!--  && (store.firstSearch = false) -->
 <template>
-    <div v-if="(store.results.length === 0) && (store.firstSearch = false)">
+    <div v-if="(store.results.length === 0)">
         <h1 class="text-center">Nessun Risultato</h1>
     </div>
     <div v-else class="my_col position-relative" v-for="item in store.results">
