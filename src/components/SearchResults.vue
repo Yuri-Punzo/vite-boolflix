@@ -22,6 +22,9 @@ export default {
 </script>
 
 <template>
+    <!-- <div v-if="store.results == [0]">
+        <h1>OPS</h1>
+    </div> -->
     <div class="my_col position-relative" v-for="item in store.results">
         <div class=" my_card">
             <div class="my_card_body">
