@@ -22,8 +22,8 @@ export default {
 </script>
 
 <template>
-    <!-- <div v-if="store.results == [0]">
-        <h1>OPS</h1>
+    <!-- <div v-if="store.results == []">
+        <h1 class="text-center">OPS</h1>
     </div> -->
     <div class="my_col position-relative" v-for="item in store.results">
         <div class=" my_card">
@@ -32,7 +32,8 @@ export default {
                     <h5>Titolo: </h5>
                     <p class="fs-5">{{ item.title }} {{ item.name }}</p>
                 </div>
-                <div class="original_title pt-2">
+                <div class="original_title pt-2"
+                    v-show="(item.title || item.name) !== (item.original_title || item.original_name)">
                     <h5>Titolo originale: </h5>
                     <p class="fs-5">{{ item.original_title }} {{ item.original_name }}</p>
                 </div>
