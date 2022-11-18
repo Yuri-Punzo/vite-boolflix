@@ -8,7 +8,8 @@ export default {
         }
     },
     methods: {
-        searchFunction() {
+        async searchFunction() {
+            store.validSearch = true
             store.results = []
             let searchQuery = store.searchText
             let seriesUrl = `${store.api_series_url}api_key=${store.api_key}&query=${searchQuery}`
@@ -16,7 +17,7 @@ export default {
             store.callApi(seriesUrl)
             store.callApi(movieUrl)
             store.searchText = ""
-            store.firstSearch = false
+            setTimeout(() => { store.validSearch = false }, 1000)
         }
     }
 }

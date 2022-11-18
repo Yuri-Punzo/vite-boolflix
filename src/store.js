@@ -8,7 +8,7 @@ export const store = reactive({
     error: null,
     langList: ["it", "en", "fr", "de", "es"],
     searchText: "",
-    firstSearch: true,
+    validSearch: true,
     results: [],
     callApi: (url) => {
         axios.get(url)
@@ -18,7 +18,7 @@ export const store = reactive({
                 response.data.results.forEach(object => {
                     store.results.push(object)
                 })
-                console.log(store.results);
+                //console.log(store.results);
             })
             .catch(error => {
                 console.error(error.message);
