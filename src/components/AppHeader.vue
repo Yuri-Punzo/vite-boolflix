@@ -10,11 +10,9 @@ export default {
     methods: {
         searchFunction() {
             store.results = null
-            let seriesUrl
-            let movieUrl
             let searchQuery = store.searchText
-            seriesUrl = `${store.api_series_url}api_key=${store.api_key}&query=${searchQuery}`
-            movieUrl = `${store.api_movie_url}api_key=${store.api_key}&query=${searchQuery}`
+            let seriesUrl = `${store.api_series_url}api_key=${store.api_key}&query=${searchQuery}`
+            let movieUrl = `${store.api_movie_url}api_key=${store.api_key}&query=${searchQuery}`
             store.callApi(seriesUrl)
             store.callApi(movieUrl)
             store.searchText = ""
