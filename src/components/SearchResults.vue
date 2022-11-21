@@ -31,20 +31,22 @@ export default {
                     <h5>Titolo: </h5>
                     <p class="fs-5">{{ item.title }} {{ item.name }}</p>
                 </div>
+                <!-- /title -->
                 <div class="original_title pt-2"
                     v-show="(item.title || item.name) !== (item.original_title || item.original_name)">
                     <h5>Titolo originale: </h5>
                     <p class="fs-5">{{ item.original_title }} {{ item.original_name }}</p>
                 </div>
-
+                <!-- /original_title -->
                 <LanguageFlag :itemLanguage="item.original_language" />
-
+                <!-- /LanguageFlag -->
                 <StarRatings :itemRating="item.vote_average" />
-
+                <!-- /StarRatings -->
                 <div class="overview pt-2">
                     <h5>Overview: </h5>
                     <p class="fs-5">{{ item.overview }}</p>
                 </div>
+                <!-- /overview -->
             </div>
         </div>
         <div class="poster" v-if="item.poster_path === null">
@@ -53,6 +55,7 @@ export default {
         <div class="poster" v-else>
             <img :src="`https://image.tmdb.org/t/p/w342${item.poster_path}`" alt="">
         </div>
+        <!-- poster -->
     </div>
 </template>
 
